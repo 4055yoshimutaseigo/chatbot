@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>chat</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="line__container">
+    <div class="line__title">
+        うーいん
+    </div>
+    <div class="line__contents scroll">
+        {% for message in messages %}
+        <div class="line__right">
+            <div class="text">{{ message.contents }}</div>
+            <span class="date">既読<br>0:30</span>
+        </div>
+        <div class="line__left">
+            <figure>
+                <img src="{% static 'images/wuin.png' %}"/>
+            </figure>
+            <div class="line__left-text">
+                <div class="name">うーいん</div>
+                <div class="text">{{message.response}}</div>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="line__form-container">
+            <form class="line__form" action="{% url 'chat:post' %}" method="post">
+                {% csrf_token %}
+                <input class="line__input" size="20" type="text" name="contents" required>
+                <input class="line__submit" type="submit" value="→">
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
