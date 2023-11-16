@@ -2,15 +2,22 @@
 //LINE風チャット画面(会話方式)を記事に表示する方法
 /////////////////////////////////////////////////*/
 
+
+
 .line__container {
   position: relative;
-  padding:0;
-  background: #7494c0;
+  padding: 0;
+  background-color: #7494c0;
+  background-image: url('../images/winter.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
   max-width: 400px;
   margin: 20px auto;
   font-size: 80%;
 }
+
 
 /* タイトル部分 */
 .line__container .line__title {
@@ -20,6 +27,7 @@
   font-size: 150%;
   color: #ffffff;
 }
+
 
 /* 会話部分 */
 .line__container .line__contents {
