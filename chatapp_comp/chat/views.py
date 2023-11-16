@@ -12,7 +12,7 @@ def index(request):
 
 
 def post(request):
-    openai.api_key = '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'
+    openai.api_key = ''
 
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
