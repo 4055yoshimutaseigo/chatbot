@@ -25,6 +25,13 @@
             <div class="line__left-text">
                 <div class="name">旅行ナビさん</div>
                 <div class="text">{{message.response}}</div>
+                <div class="buttons-container">
+                    <div class="button_sightseeing">観光地</div>
+                    <div class="button_hotel">ホテル</div>
+                    <div class="button_gourmet">グルメ</div>
+                    <div class="button_souvenir">お土産</div>
+                    <div class="button_reset">リセット</div>
+                </div>
             </div>
         </div>
         {% endfor %}
@@ -32,7 +39,7 @@
         <div class="line__form-container">
             <form class="line__form" action="{% url 'chat:post' %}" method="post">
                 {% csrf_token %}
-                <input class="line__input" size="20" type="text" name="contents" required>
+                <input class="line__input" size="20" type="text" name="contents" required placeholder="こちらにメッセージを入力してください">
                 <input class="line__submit" type="submit" value="→">
             </form>
         </div>

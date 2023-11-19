@@ -1,3 +1,4 @@
+
 /*/////////////////////////////////////////////////
 //LINE風チャット画面(会話方式)を記事に表示する方法
 /////////////////////////////////////////////////*/
@@ -21,7 +22,7 @@
 
 /* タイトル部分 */
 .line__container .line__title {
-  background: #273246;
+  background: #66CDAA;
   padding: 10px;
   text-align: center;
   font-size: 150%;
@@ -174,4 +175,36 @@
   background-color: #f1f1f1;
   border-radius: 10px;
   line-height: 2;
+}
+
+/* ボタンコンテナ */
+.line__container .line__left-text .buttons-container {
+  display: flex;　/* 横並べ */
+  justify-content: space-between; /* 真ん中に均等に横並び */
+  margin-top: 10px;
+
+}
+
+/* 観光地、ホテル、グルメ、お土産ボタンのスタイル */
+.line__container .line__left-text .buttons-container div {
+  background-color: #4CAF50; /* 背景色 */
+  color: #ffffff; /* 文字色 */
+  text-align: center; /* 文字の置き場所真ん中 */
+  cursor: pointer; /* カーソル */
+  font-size: 60%;　/* 文字のサイズ親要素と比べての何パーセントか */
+  padding: 30px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+}
+
+/* リセットボタンのスタイル */
+.line__container .line__left-text .buttons-container .button_reset {
+  background-color: #95a5a6;
+  color: #ffffff;
+  text-align: center; /* 文字の置き場所真ん中 */
+  cursor: pointer; /* カーソル */
+  font-size: 60%;　/* 文字のサイズ親要素と比べての何パーセントか */
+  padding: 30px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
 }
