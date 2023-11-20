@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e75660d8-ea25-4652-a332-6766cd5394c2" name="Changes" comment="フォーム修正&#10;&#10;・入力フォームに薄い文字で「こちらにメッセージを入力して下さい」と追加">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e75660d8-ea25-4652-a332-6766cd5394c2" name="Changes" comment="フォーム修正&#10;&#10;・入力フォームに薄い文字で「こちらにメッセージを入力して下さい」と追加" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,11 +33,6 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\sss2023-BasicJ\chatapp_comp\chat\static\images" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,12 +42,12 @@
       <option name="presentableId" value="Default" />
       <updated>1699943617674</updated>
     </task>
-    <task id="LOCAL-00001" summary="タイトル、アイコン名、アイコン画像、背景変更&#10;&#10;タイトル：旅行ナビゲーター&#10;アイコン名：旅行ナビさん&#10;アイコン画像：ご清聴ありがとうございました。&#10;背景変更：冬ver">
-      <created>1700055815055</created>
+    <task id="LOCAL-00001" summary="フォーム修正&#10;&#10;・入力フォームに薄い文字で「こちらにメッセージを入力して下さい」と追加">
+      <created>1700511899753</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1700055815055</updated>
+      <updated>1700511899753</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
