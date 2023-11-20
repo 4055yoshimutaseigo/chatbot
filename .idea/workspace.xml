@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ed9a705-596e-47d0-8dd3-bce3fa9740ed" name="Changes" comment="タイトル、アイコン名、アイコン画像、背景変更&#10;&#10;タイトル：旅行ナビゲーター&#10;アイコン名：旅行ナビさん&#10;アイコン画像：ご清聴ありがとうございました。&#10;背景変更：冬ver">
+    <list default="true" id="e75660d8-ea25-4652-a332-6766cd5394c2" name="Changes" comment="フォーム修正&#10;&#10;・入力フォームに薄い文字で「こちらにメッセージを入力して下さい」と追加">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp_comp/chat/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp_comp/chat/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp_comp/chat/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp_comp/chat/templates/chat/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +14,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -42,7 +43,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5ed9a705-596e-47d0-8dd3-bce3fa9740ed" name="Changes" comment="" />
+      <changelist id="e75660d8-ea25-4652-a332-6766cd5394c2" name="Changes" comment="フォーム修正&#10;&#10;・入力フォームに薄い文字で「こちらにメッセージを入力して下さい」と追加" />
       <created>1699943617674</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
