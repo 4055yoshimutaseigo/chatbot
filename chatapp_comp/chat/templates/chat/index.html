@@ -13,6 +13,16 @@
         旅行ナビゲーター
     </div>
     <div class="line__contents scroll">
+        <div class="line__left">
+             <figure>
+                <img src="{% static 'images/travelNavigator1.gif' %}"/>
+            </figure>
+            <div class="line__left-text">
+                <div class="name">旅行ナビさん</div>
+                <div class="text">出発地は？</div>
+            </div>
+        </div>
+
         {% for message in messages %}
         <div class="line__right">
             <div class="text">{{ message.contents }}</div>
@@ -26,11 +36,11 @@
                 <div class="name">旅行ナビさん</div>
                 <div class="text">{{message.response}}</div>
                 <div class="buttons-container">
-                    <div class="button_sightseeing">観光地</div>
-                    <div class="button_hotel">ホテル</div>
-                    <div class="button_gourmet">グルメ</div>
-                    <div class="button_souvenir">お土産</div>
-                    <div class="button_reset">リセット</div>
+                    <input class="line__choice" type="submit" value="観光地">
+                    <input class="line__choice" type="submit" value="ホテル">
+                    <input class="line__choice" type="submit" value="グルメ">
+                    <input class="line__choice" type="submit" value="お土産">
+                    <input class="line__choice" type="submit" value="リセット">
                 </div>
             </div>
         </div>

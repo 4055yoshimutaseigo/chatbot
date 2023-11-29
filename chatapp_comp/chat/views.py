@@ -23,14 +23,14 @@ def post(request):
             },
             {
                 "role": "user",
-                "content": request.POST['contents']
+                "content": a
             },
         ]
     )
     results = response["choices"][0]["message"]["content"]
 
     Message.objects.create(
-        contents=request.POST['contents'],
+        contents=a,
         response=results,
         created_at=timezone.now()
     )
