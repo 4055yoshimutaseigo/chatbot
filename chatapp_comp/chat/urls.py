@@ -4,7 +4,6 @@ from . import views
 
 app_name = 'chat'
 urlpatterns = [
-
-    path('', views.index, name='index'),
-    path('post', views.post, name='post'),
+    path('', views.index, name='index'),  # views.pyのindex関数へアクセス
+    path('post', views.post, name='post'),  # views.pyのpost関数へアクセス
 ]

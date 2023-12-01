@@ -29,6 +29,25 @@
   color: #ffffff;
 }
 
+/* 最初の質問 */
+.line__container .line__title.line__question-container{
+　 display: flex; /* 横並びにする */
+  align-items: center; /* 要素を垂直方向に中央揃えにする（必要に応じて変更） */
+  justify-content: space-between; /* 要素を水平方向に均等に配置する */
+  position: absolute;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  padding: 2px;
+}
+
+.line__form {
+  display: flex; /* フォーム内の要素も横並びにする */
+  gap: 5px; /* 要素間の間隔を調整 */
+}
+
+
 
 /* 会話部分 */
 .line__container .line__contents {
@@ -160,6 +179,7 @@
   color: #ffffff;
 }
 
+/* 入力エリア */
 .line__form-container {
   position: absolute;
   bottom: 0;

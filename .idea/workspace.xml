@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ed9a705-596e-47d0-8dd3-bce3fa9740ed" name="Changes" comment="タイトル、アイコン名、アイコン画像、背景変更&#10;&#10;タイトル：旅行ナビゲーター&#10;アイコン名：旅行ナビさん&#10;アイコン画像：ご清聴ありがとうございました。&#10;背景変更：冬ver">
+    <list default="true" id="5ed9a705-596e-47d0-8dd3-bce3fa9740ed" name="Changes" comment="ボタン、管理者画面、apiへの質問、コメントをつける&#10;&#10;ボタン・・左側コメントのあとに表示&#10;管理者画面・・・授業の通りのid,pass&#10;apiへの質問・・「京都」と入力すると、「&quot;京都&quot;の旅行プランを提案してください.&#10;初めの５文字だけ返答してください」、となるように変更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp_comp/chat/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp_comp/chat/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatapp_comp/chat/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chatapp_comp/chat/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp_comp/chat/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatapp_comp/chat/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp_comp/chat/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatapp_comp/chat/templates/chat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chatapp_comp/chat/templates/chat/index.html" afterDir="false" />
@@ -45,6 +43,34 @@
       <recent name="C:\sss2023-BasicJ\chatapp_comp\chat\static\images" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sss2023-BasicJ" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chatapp_comp/chat" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chatapp_comp/chat/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700055815055</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ボタン、管理者画面、apiへの質問&#10;&#10;ボタン・・左側コメントのあとに表示&#10;管理者画面・・・授業の通りのid,pass&#10;apiへの質問・・京都と入力すると、○○の旅行プランを提案してください初めの５文字だけ返答してください、となるように変更">
+      <created>1701234428959</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701234428959</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,6 +127,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="タイトル、アイコン名、アイコン画像、背景変更&#10;&#10;タイトル：旅行ナビゲーター&#10;アイコン名：旅行ナビさん&#10;アイコン画像：ご清聴ありがとうございました。&#10;背景変更：冬ver" />
-    <option name="LAST_COMMIT_MESSAGE" value="タイトル、アイコン名、アイコン画像、背景変更&#10;&#10;タイトル：旅行ナビゲーター&#10;アイコン名：旅行ナビさん&#10;アイコン画像：ご清聴ありがとうございました。&#10;背景変更：冬ver" />
+    <MESSAGE value="ボタン、管理者画面、apiへの質問&#10;&#10;ボタン・・左側コメントのあとに表示&#10;管理者画面・・・授業の通りのid,pass&#10;apiへの質問・・京都と入力すると、○○の旅行プランを提案してください初めの５文字だけ返答してください、となるように変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="ボタン、管理者画面、apiへの質問&#10;&#10;ボタン・・左側コメントのあとに表示&#10;管理者画面・・・授業の通りのid,pass&#10;apiへの質問・・京都と入力すると、○○の旅行プランを提案してください初めの５文字だけ返答してください、となるように変更" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 from django.db import models
 
 
-
+# テーブルを作成
 class Message(models.Model):
     contents = models.CharField(max_length=80)
     response = models.TextField()

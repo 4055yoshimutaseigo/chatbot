@@ -12,6 +12,16 @@
     <div class="line__title">
         旅行ナビゲーター
     </div>
+        <div class="line__question-container">
+            <form class="line__form" action="{% url 'chat:post' %}" method="post">
+                    {% csrf_token %}
+                <input class="line__input" size="20" type="text" name="departure" required placeholder="出発地は？">
+                <input class="line__input" size="20" type="text" name="destination" required placeholder="目的地は？">
+                <input class="line__input" size="20" type="text" name="stay" required placeholder="何泊ですか？">
+                <input class="line__submit" type="submit" value="→">
+            </form>
+        </div>
+
     <div class="line__contents scroll">
         <div class="line__left">
              <figure>
@@ -19,7 +29,7 @@
             </figure>
             <div class="line__left-text">
                 <div class="name">旅行ナビさん</div>
-                <div class="text">出発地は？</div>
+                <div class="text">旅行プランを提案します。上の入力フォームを入力してください。</div>
             </div>
         </div>
 
@@ -34,14 +44,17 @@
             </figure>
             <div class="line__left-text">
                 <div class="name">旅行ナビさん</div>
-                <div class="text">{{message.response}}</div>
-                <div class="buttons-container">
-                    <input class="line__choice" type="submit" value="観光地">
-                    <input class="line__choice" type="submit" value="ホテル">
-                    <input class="line__choice" type="submit" value="グルメ">
-                    <input class="line__choice" type="submit" value="お土産">
-                    <input class="line__choice" type="submit" value="リセット">
-                </div>
+                <div class="text">{{message.response}}</div>　
+                <form action="{% url 'chat:post' %}" method="post">
+                    {% csrf_token %}
+                    <div class="buttons-container">
+                        <input class="line__choice" type="submit" name="tourist_spot" value="観光地">
+                        <input class="line__choice" type="submit" name="hotel" value="ホテル">
+                        <input class="line__choice" type="submit" name="gourmet" value="グルメ">
+                        <input class="line__choice" type="submit" name="souvenir" value="お土産">
+                        <input class="line__choice" type="submit" name="reset" value="リセット">
+                    </div>
+                </form>
             </div>
         </div>
         {% endfor %}
