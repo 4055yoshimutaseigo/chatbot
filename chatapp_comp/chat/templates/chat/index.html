@@ -45,6 +45,7 @@
             <div class="line__left-text">
                 <div class="name">旅行ナビさん</div>
                 <div class="text">{{message.response}}</div>　
+                <div class="text">もっと詳しく知りたいことについてクリックしてください。また、回答がおかしいなと思った場合や、新しく会話を始めるためにはタイトル下のフォームに再度入力してください。</div>
                 <form action="{% url 'chat:post' %}" method="post">
                     {% csrf_token %}
                     <div class="buttons-container">
@@ -55,6 +56,10 @@
                         <input class="line__choice" type="submit" name="reset" value="リセット">
                     </div>
                 </form>
+                <a href="https://www.youtube.com/?gl=JP&hl=ja">youtube</a>
+                <a href="https://www.instagram.com/">instagram</a>
+                <a href="https://www.tiktok.com/ja-JP">tiktok</a>
+
             </div>
         </div>
         {% endfor %}

@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
 import openai
-
-from .models import Message
+from .models import Message, Answer
 
 
 def index(request): # 最初の画面、過去のMessage.objects(履歴)をhtmlに表示する
@@ -14,25 +13,43 @@ def index(request): # 最初の画面、過去のMessage.objects(履歴)をhtml�
 def post(request): # htmlのfromが入力されると、内容がpost関数へやってくる
 
     if request.method == "POST":
-        # タイトル下のテキストボックス（出発地は？目的地は？何泊しますか？）
         if "departure" in request.POST:
             departure = request.POST['departure']
             destination = request.POST['destination']
             stay = request.POST['stay']
             question = f"{departure}から{destination}の、{stay}の旅行プランを提案してください。初めの５文字だけ返答してください"
+
+            Answer.objects.create(
+                departure=departure,
+                destination=destination,
+                stay=stay,
+                created_at=timezone.now()
+                )
+
+
         # 画面下のフリー入力フォーム
-        if "contents" in request.POST:
+        elif "contents" in request.POST:
             contents = request.POST['contents']
             question = f"{contents}。初めの５文字だけ返答してください"
+
+
         # ボタン
         elif "tourist_spot" in request.POST:
-            question = "観光地についてもっと詳しく教えてください。初めの５文字だけ返答してください"
+            last_answer=Answer.objects.order_by('created_at').last() # 最新のデータベースを取得
+            question = f"{last_answer.destination}の観光地についてもっと詳しく教えてください。初めの５文字だけ返答してください"
+
         elif "hotel" in request.POST:
-            question = "ホテルについてもっと詳しく教えてください。初めの５文字だけ返答してください"
+            last_answer = Answer.objects.order_by('created_at').last()  # 最新のデータベースを取得
+            question = f"{last_answer.destination}のホテルについてもっと詳しく教えてください。初めの５文字だけ返答してください"
+
         elif "gourmet" in request.POST:
-            question = "グルメやおいしいレストランについてもっと詳しく教えてください。初めの５文字だけ返答してください"
+            last_answer = Answer.objects.order_by('created_at').last()  # 最新のデータベースを取得
+            question = f"{last_answer.destination}のグルメやおいしいレストランについてもっと詳しく教えてください。初めの５文字だけ返答してください"
+
         elif "souvenir" in request.POST:
-            question = "お土産についてもっと詳しく教えてください。初めの５文字だけ返答してください"
+            last_answer = Answer.objects.order_by('created_at').last()  # 最新のデータベースを取得
+            question = f"{last_answer.destination}のお土産についてもっと詳しく教えてください。初めの５文字だけ返答してください"
+
         elif "reset" in request.POST:
             question = "今までの会話をリセットしてください"
 
@@ -44,7 +61,7 @@ def post(request): # htmlのfromが入力されると、内容がpost関数へ�
         messages=[
             {
                 "role": "system",
-                "content": "日本語で応答してください" # 事前に細かい指示を入れる
+                "content": "日本語で応答してください。あなたは旅行のモデルプランを作成するプランナーです。もし、今までの会話をリセットしてくださいと言われたら、「今までの会話をリセットしました。タイトル下のフォームに新しい行先を入力してください」と返答してください。" # 事前に細かい指示を入れる
             },
             {
                 "role": "user", # ユーザーからの質問という意味
@@ -63,4 +80,3 @@ def post(request): # htmlのfromが入力されると、内容がpost関数へ�
         created_at=timezone.now()
     )
     return redirect('chat:index') # index関数にリダイレクト
-
