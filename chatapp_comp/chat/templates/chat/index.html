@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 {% load static %}
 <html>
@@ -22,7 +23,7 @@
             </form>
         </div>
 
-    <div class="line__contents scroll">
+    <div class="line__contents scroll" id="chat-container">
         <div class="line__left">
              <figure>
                 <img src="{% static 'images/travelNavigator1.gif' %}"/>
@@ -36,7 +37,6 @@
         {% for message in messages %}
         <div class="line__right">
             <div class="text">{{ message.contents }}</div>
-            <span class="date">既読<br>0:30</span>
         </div>
         <div class="line__left">
             <figure>
@@ -45,7 +45,7 @@
             <div class="line__left-text">
                 <div class="name">旅行ナビさん</div>
                 <div class="text">{{message.response}}</div>　
-                <div class="text">もっと詳しく知りたいことについてクリックしてください。また、回答がおかしいなと思った場合や、新しく会話を始めるためにはタイトル下のフォームに再度入力してください。</div>
+                <div class="text">もっと詳しく知りたいことについてクリックしてください。また、回答がおかしいなと思った場合や、新しく会話を始めるためにはタイトル下のフォームに再度入力してください。最新の情報が知りたい場合は、各SNSのアイコンをクリックして調べてください。</div>
                 <form action="{% url 'chat:post' %}" method="post">
                     {% csrf_token %}
                     <div class="buttons-container">
@@ -56,24 +56,36 @@
                         <input class="line__choice" type="submit" name="reset" value="リセット">
                     </div>
                 </form>
-                <a href="https://www.youtube.com/?gl=JP&hl=ja" target="_blank">youtube</a>
-                <a href="https://www.instagram.com/" target="_blank">instagram</a>
-                <a href="https://www.tiktok.com/ja-JP" target="_blank">tiktok</a>
+                <div class="sns-logo">
+                    <a href="https://www.youtube.com/?gl=JP&hl=ja" target="_blank">
+                        <img src="{% static 'images/youtube.png' %}" alt="youtubeのロゴ" width="30px" >
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="{% static 'images/Instagram.png' %}" alt="Instagramのロゴ" width="30px">
+                    </a>
+                    <a href="https://www.tiktok.com/ja-JP" target="_blank">
+                        <img src="{% static 'images/tik-tok.png' %}" alt="tik-tokのロゴ" width="30px">
+                    </a>
+                </div>
 
             </div>
         </div>
         {% endfor %}
-
         <div class="line__form-container">
-            <form class="line__form" action="{% url 'chat:post' %}" method="post">
-                {% csrf_token %}
-                <input class="line__input" size="20" type="text" name="contents" required placeholder="こちらにメッセージを入力してください">
-                <input class="line__submit" type="submit" value="→">
-            </form>
-        </div>
+        <form class="line__form" action="{% url 'chat:post' %}" method="post">
+            {% csrf_token %}
+            <input class="line__input" size="20" type="text" name="contents" required placeholder="こちらにメッセージを入力してください">
+            <input class="line__submit" type="submit" value="→">
+        </form>
+    </div>
 
     </div>
 </div>
+    <script>
+        let chatContainer = document.getElementById('chat-container');
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    </script>
 
 </body>
 </html>
+

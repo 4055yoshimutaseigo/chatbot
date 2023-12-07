@@ -61,6 +61,7 @@
   overflow-y: scroll;
 }
 
+
 /* スタンプ画像最大幅 */
 .line__container .stamp img {
   max-width:150px;
@@ -100,7 +101,7 @@
 
 .line__container .line__left .line__left-text .name {
   font-size: 80%;
-  color: #ffffff;
+  color: ##008080;
 }
 
 /* コメントエリア */
@@ -184,7 +185,7 @@
   position: absolute;
   bottom: 0;
   background-color: white;
-  width: 100%;
+  width: 95%;
   left: 0;
   padding: 2px;
 }
@@ -221,3 +222,14 @@
   background-color: #95a5a6;
 }
 
+
+/* SNSロゴの配置*/
+.sns-logo{
+  display: flex; /* 横並べ */
+  margin-top: 10px;
+}
+
+/* 各SNSロゴのスタイル */
+.sns-logo a {
+  margin-right: 10px; /* ロゴ同士の横の間隔を調整 */
+}

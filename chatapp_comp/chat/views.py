@@ -51,7 +51,7 @@ def post(request): # htmlのfromが入力されると、内容がpost関数へ�
             question = f"{last_answer.destination}のお土産についてもっと詳しく教えてください。初めの５文字だけ返答してください"
 
         elif "reset" in request.POST:
-            question = "今までの会話をリセットしてください"
+            question = "今までの会話をリセットしてください。"
 
 
     openai.api_key = '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'
