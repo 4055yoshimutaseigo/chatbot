@@ -19,4 +19,4 @@ class Answer(models.Model):
     created_at = models.DateTimeField()
 
     def __str__(self):
-        return self.created_at
+        return str(self.created_at)

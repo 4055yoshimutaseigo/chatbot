@@ -1,0 +1,24 @@
+{% extends 'chat/index.html' %}
+{% load static %}
+{% block contents %}
+    <div class="my-3">
+        <a href="{% url 'chat:index' %}">旅行ナビゲーターに戻る</a>
+    </div>
+
+    <p>ここは行先くじです。</p>
+    <p>画像をクリックするとランダムでおすすめの行先が表示されます。</p>
+
+    <div>
+        <form action="{% url 'chat:lottery' %}" method="post">
+        {% csrf_token %}
+            <div class="buttons-container">
+                <button class="line__choice" type="submit" name="travel_lottery" >
+                    <img src="{% static 'images/icons8-worldwide-location.gif' %}" alt="行先くじ">
+                </button>
+
+            </div>
+        </form>
+    </div>
+
+<div class="text">{{ destination1 }}</div>
+{% endblock %}

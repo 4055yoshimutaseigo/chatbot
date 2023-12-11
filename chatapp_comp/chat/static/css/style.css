@@ -1,4 +1,3 @@
-
 /*/////////////////////////////////////////////////
 //LINE風チャット画面(会話方式)を記事に表示する方法
 /////////////////////////////////////////////////*/
@@ -9,10 +8,6 @@
   position: relative;
   padding: 0;
   background-color: #7494c0;
-  background-image: url('../images/winter.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   overflow: hidden;
   max-width: 400px;
   margin: 20px auto;
@@ -27,6 +22,9 @@
   text-align: center;
   font-size: 150%;
   color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* 最初の質問 */
@@ -46,7 +44,6 @@
   display: flex; /* フォーム内の要素も横並びにする */
   gap: 5px; /* 要素間の間隔を調整 */
 }
-
 
 
 /* 会話部分 */
@@ -232,4 +229,15 @@
 /* 各SNSロゴのスタイル */
 .sns-logo a {
   margin-right: 10px; /* ロゴ同士の横の間隔を調整 */
+}
+
+/* 行先くじの画像 */
+.line__title img {
+  margin-left: 10px;
+}
+
+/* 行先くじのフォント */
+.lottery-text {
+    font-size: 10px;
+    margin: 0;
 }
