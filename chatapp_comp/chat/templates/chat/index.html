@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 {% load static %}
 <html>
@@ -6,12 +5,26 @@
     <meta charset="UTF-8">
     <title>chat</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+         .line__container{
+            background-image: url('{{ background_image }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
-
+{% block contents %}
 <div class="line__container">
     <div class="line__title">
         旅行ナビゲーター
+         <div class="destination-lottery">
+                    <a href= "{% url 'chat:lottery' %}">
+                        <img src="{% static 'images/roadmap.gif' %}"  width="50px" >
+                    </a>
+                    <p class="lottery-text">行先くじ</p>
+         </div>
     </div>
         <div class="line__question-container">
             <form class="line__form" action="{% url 'chat:post' %}" method="post">
@@ -22,7 +35,6 @@
                 <input class="line__submit" type="submit" value="→">
             </form>
         </div>
-
     <div class="line__contents scroll" id="chat-container">
         <div class="line__left">
              <figure>
@@ -72,20 +84,21 @@
         </div>
         {% endfor %}
         <div class="line__form-container">
-        <form class="line__form" action="{% url 'chat:post' %}" method="post">
-            {% csrf_token %}
-            <input class="line__input" size="20" type="text" name="contents" required placeholder="こちらにメッセージを入力してください">
-            <input class="line__submit" type="submit" value="→">
-        </form>
-    </div>
+            <form class="line__form" action="{% url 'chat:post' %}" method="post">
+                {% csrf_token %}
+                <input class="line__input" size="20" type="text" name="contents" required placeholder="こちらにメッセージを入力してください">
+                <input class="line__submit" type="submit" value="→">
+            </form>
+        </div>
 
     </div>
+{% endblock %}
 </div>
+<!--画面起動時にスクロールバーを一番下の状態で表示する-->
     <script>
         let chatContainer = document.getElementById('chat-container');
         chatContainer.scrollTop = chatContainer.scrollHeight;
     </script>
-
 </body>
 </html>
 
